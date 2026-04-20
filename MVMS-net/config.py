@@ -24,9 +24,16 @@ class Config:
     '''
     MyNet6View, resnet1d_wang, xresnet1d101, inceptiontime, fcn_wang, lstm, lstm_bidir, vit, mobilenetv3_small
     '''
+    # PatchTST, TimesNet, iTransformer, MambaSL (Linux+CUDA only)
     model_name = 'MyNet6View'
 
     model_name2 = 'MyNet'
+
+    # ECG sequence length (100 Hz → 1000, 500 Hz → 5000)
+    seq_len = 1000
+
+    # dropout rate for TSL baseline models
+    dropout = 0.1
 
     batch_size = 64
 

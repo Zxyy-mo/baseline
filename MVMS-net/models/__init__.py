@@ -14,6 +14,10 @@ from .vit import vit
 from .mobilenet_v3 import mobilenetv3_small, mobilenetv3_large
 from .dccacb import dccacb
 from .ati_cnn import ATI_CNN
+from .patchtst import PatchTST
+from .timesnet import TimesNet
+from .itransformer import iTransformer
+from .mamba_sl import MambaSL
 
 
 
