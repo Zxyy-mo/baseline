@@ -1,0 +1,23 @@
+# MVMS-net dependencies
+# Install with: pip install -r requirements.txt
+#
+# PyTorch: install separately from https://pytorch.org/get-started/locally/
+# CPU-only (current env):  pip install torch==2.11.0
+# GPU (CUDA 11.8):         pip install torch==2.11.0+cu118 --index-url https://download.pytorch.org/whl/cu118
+
+torch==2.11.0
+numpy==2.4.4
+einops==0.8.2
+
+# Data processing
+pandas
+scipy
+scikit-learn
+tqdm
+wfdb
+
+# Optional: CPSC dataset conversion only (convert_cpsc.py)
+# stratisfy
+
+# Optional: MambaSL model — requires Linux + CUDA, not available on Windows
+# mamba_ssm

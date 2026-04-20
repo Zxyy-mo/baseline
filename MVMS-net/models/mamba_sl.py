@@ -10,12 +10,13 @@ from layers.Embed import PositionalEmbedding
 
 try:
     from layers.MambaBlock import Mamba_TimeVariant
+    _mamba_available = True
 except ImportError as _e:
-    raise ImportError(
-        "MambaSL requires the `mamba_ssm` package which only runs on Linux with CUDA. "
-        "Install it with:  pip install mamba_ssm causal_conv1d\n"
-        f"Original error: {_e}"
-    ) from _e
+    import warnings
+    warnings.warn(
+        f"MambaSL requires `mamba_ssm` (Linux + CUDA only). MambaSL class will not be usable.\nOriginal error: {_e}"
+    )
+    _mamba_available = False
 
 
 class _TokenEmbedding(nn.Module):

@@ -17,7 +17,11 @@ from .ati_cnn import ATI_CNN
 from .patchtst import PatchTST
 from .timesnet import TimesNet
 from .itransformer import iTransformer
-from .mamba_sl import MambaSL
+try:
+    from .mamba_sl import MambaSL
+except ImportError:
+    import warnings
+    warnings.warn("MambaSL unavailable: mamba_ssm not installed (requires Linux + CUDA). Skipping.", stacklevel=1)
 
 
 
